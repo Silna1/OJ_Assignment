@@ -21,6 +21,20 @@
             text-decoration: none;
             color: black;
         }
+
+        .user-profile {
+
+
+          background: linear-gradient(white,grey);
+          opacity: 0.7;
+        }
+        .user-info {
+            text-align: center;
+            font-family: 'Oswald';
+            font-weight: 400;
+            text-transform: capitalize;
+        }
+
     </style>
 </head>
 
@@ -33,6 +47,14 @@
                 <p>Hello {{request.user}}</p>
                 {% endif %}
                 <div class="card">
+                    <div class="card-header">
+                        Profile
+                    </div>
+                    <div class="user-profile">
+                    <div class="user-info">
+                        <p class="user-name">{{request.user.first_name}}</p>
+                        <p class="user-email">{{request.user.email}}</p>
+                    </div></div>
                     <div class="card-header">
                         Categories
                     </div>
